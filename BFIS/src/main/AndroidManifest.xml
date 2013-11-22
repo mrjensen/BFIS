@@ -23,12 +23,9 @@
             </intent-filter>
         </activity>
         <activity android:name=".LoginActivity" />
-<<<<<<< HEAD
         <activity android:name=".TodoActivity" />
-=======
         <activity android:name=".WelcomeActivity" />
         <activity android:name=".BloodPressureActivity" />
->>>>>>> 9869579782c3a6860b829e4c3a34d0391736b0ce
     </application>
 
 </manifest>
