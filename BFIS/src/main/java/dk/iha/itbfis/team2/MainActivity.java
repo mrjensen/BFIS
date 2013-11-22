@@ -39,6 +39,15 @@ public class MainActivity extends Activity {
             }
         });
 
+        Button todoButton = (Button) findViewById(R.id.btn_todo_list);
+        todoButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, TodoActivity.class);
+                startActivity(intent);
+            }
+        });
+
     }
 
 
