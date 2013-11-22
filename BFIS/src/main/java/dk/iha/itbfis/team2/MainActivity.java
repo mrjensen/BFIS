@@ -30,6 +30,15 @@ public class MainActivity extends Activity {
             }
         });
 
+        Button bloodButton = (Button) findViewById(R.id.btn_bloodstart);
+        bloodButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, BloodPressureActivity.class);
+                startActivity(intent);
+            }
+        });
+
     }
 
 
