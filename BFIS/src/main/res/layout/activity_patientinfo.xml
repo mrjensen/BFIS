@@ -2,6 +2,59 @@
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@drawable/login_background">
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Patientinformation"
+        android:id="@+id/textView2"
+        android:layout_marginLeft="20dip"
+        android:layout_gravity="center_horizontal"
+        android:textSize="28dp" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dip"
+        android:textSize="20dip"
+        android:layout_gravity="center_horizontal"
+        android:text="Hjem registreret"/>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dip"
+        android:layout_width="250dip"
+        android:layout_height="100dip"
+        android:background="@android:color/darker_gray">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Gurli og Svend Andersen"
+            android:layout_marginLeft="5dip"
+            android:layout_marginTop="5dip"
+            android:textSize="16dip"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Snogebæksvej 42"
+            android:layout_marginLeft="5dip"
+            android:layout_marginTop="5dip"
+            android:textSize="16dip"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="9100 Svendstrup"
+            android:layout_marginLeft="5dip"
+            android:layout_marginTop="5dip"
+            android:textSize="16dip"/>
+
+    </LinearLayout>
 </LinearLayout>

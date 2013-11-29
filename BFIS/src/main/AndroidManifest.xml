@@ -32,6 +32,7 @@
         <activity android:name=".BloodPressureDoneActivity" />
         <activity android:name=".MapActivity" />
         <activity android:name=".PatientActivity" />
+        <activity android:name=".ArrivedActivity" />
 
         <service android:name=".BloodpressureService" android:label="BloodpressureService"/>
 
