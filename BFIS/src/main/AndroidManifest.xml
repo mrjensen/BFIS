@@ -28,6 +28,8 @@
         <activity android:name=".TodoActivity" />
         <activity android:name=".WelcomeActivity" />
         <activity android:name=".BloodPressureActivity" />
+        <activity android:name=".BPPatientSelectActivity" />
+
         <service android:name=".BloodpressureService" android:label="BloodpressureService"/>
 
     </application>
