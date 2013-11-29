@@ -71,6 +71,7 @@ public class BloodPressureActivity extends Activity {
         patient.setText(name);
 
         Intent intent = new Intent(BloodPressureActivity.this, BloodpressureService.class);
+        intent.putExtra("name", name);
 
         startService(intent);
     }

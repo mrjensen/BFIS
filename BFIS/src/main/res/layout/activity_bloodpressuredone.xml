@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/login_background">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Resultat af blodtryksmåling"
+        android:layout_gravity="center_horizontal"
+        android:textStyle="bold"
+        android:textSize="20dip"
+        android:layout_marginTop="10dip"/>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Målingen foretaget på "
+        android:layout_gravity="center_horizontal"
+        android:textSize="18dip"
+        android:layout_marginTop="30dip"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Gurli Andersen"
+        android:id="@+id/tv_patientdone"
+        android:layout_gravity="center_horizontal"
+        android:textSize="18dip"
+        android:textStyle="bold"
+        android:layout_marginTop="5dip"
+        android:layout_marginBottom="30dip"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="10dip"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Maksimum"
+            android:layout_gravity="left"
+
+            android:textSize="18dip"
+            android:textStyle="bold"
+            android:layout_marginTop="5dip"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="135"
+            android:id="@+id/tv_max_puls"
+            android:layout_gravity="right"
+            android:layout_marginLeft="10dip"
+            android:textSize="40dip"
+            android:textStyle="bold"
+            />
+
+        </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="10dip"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Minimum"
+            android:layout_gravity="left"
+
+            android:textSize="18dip"
+            android:textStyle="bold"
+            android:layout_marginTop="5dip"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="75"
+            android:id="@+id/tv_max_puls"
+            android:layout_gravity="right"
+            android:layout_marginLeft="10dip"
+            android:textSize="40dip"
+            android:textStyle="bold"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="10dip"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Gennemsnits puls"
+            android:layout_gravity="left"
+
+            android:textSize="18dip"
+            android:textStyle="bold"
+            android:layout_marginTop="5dip"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            >
+
+            <ImageView
+                android:layout_width="30dip"
+                android:layout_height="30dip"
+                android:src="@drawable/heart"
+                android:id="@+id/iv_heart"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="78"
+
+                android:textSize="40dip"
+                android:textStyle="bold"
+                />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="50dip"
+    android:orientation="horizontal"
+    android:layout_margin="10dip">
+    <Button
+        android:layout_width="150dip"
+        android:layout_height="match_parent"
+        android:text="Fortryd"
+        android:background="#cc0000"
+        android:layout_marginRight="5dip"
+        />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="Gem måling"
+        android:background="#1f8004"/>
+
+    </LinearLayout>
+
+
+</LinearLayout>

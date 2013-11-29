@@ -9,12 +9,6 @@ import android.content.Intent;
  */
 public class BloodpressureReceiver extends BroadcastReceiver {
     public void onReceive(Context context, Intent intent) {
-        String message = intent.getExtras().getString("textToBravo");
-
-        Intent progressIntent = new Intent("iha.dk.smap.Smap02.sharingIntent");
-        progressIntent.putExtra("secondsLeft", 0);
-
-        context.sendBroadcast(progressIntent);
 
         Intent new_intent = new Intent(context,BloodPressureDoneActivity.class);
         new_intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
