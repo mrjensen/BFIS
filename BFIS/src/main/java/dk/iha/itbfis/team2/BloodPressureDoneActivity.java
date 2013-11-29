@@ -3,6 +3,7 @@ package dk.iha.itbfis.team2;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.CountDownTimer;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -47,5 +48,18 @@ public class BloodPressureDoneActivity extends Activity {
 
         });
 
+        new CountDownTimer(5000, 1000) {
+            @Override
+            public void onTick(long l) {
+
+            }
+
+            @Override
+            public void onFinish() {
+                Intent intent = new Intent(BloodPressureDoneActivity.this, TodoActivity.class);
+                intent.putExtra("setDone", true);
+                startActivity(intent);
+            }
+        }.start();
     }
 }

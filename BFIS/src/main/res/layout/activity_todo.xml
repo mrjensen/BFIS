@@ -59,4 +59,13 @@
         android:text="Blodprøve (Svend)"
         android:onClick="taskCompleted"/>
 
+    <TextView
+        android:id="@+id/tick"
+        android:textSize="20dip"
+        android:textStyle="bold"
+        android:layout_marginTop="10dip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal|bottom"/>
+
 </LinearLayout>
