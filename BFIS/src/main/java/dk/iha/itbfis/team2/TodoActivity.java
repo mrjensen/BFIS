@@ -14,9 +14,27 @@ import android.widget.Toast;
  * Created by kaspersaaby on 22/11/13.
  */
 public class TodoActivity extends Activity {
+
+    private boolean setDone = false;
+
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_todo);
+
+        int[] ids = new int [] {R.id.todo_btn_1, R.id.todo_btn_2, R.id.todo_btn_3, R.id.todo_btn_4};
+        Button btn = null;
+
+        if (setDone) {
+            for(int i = 0; i < ids.length; i++) {
+                btn = (Button)findViewById(ids[i]);
+                btn.setBackground(new ColorDrawable(Color.GREEN));
+            }
+        } else {
+            for(int i = 0; i < ids.length; i++) {
+                btn = (Button)findViewById(ids[i]);
+                btn.setBackground(new ColorDrawable(Color.YELLOW));
+            }
+        }
     }
 
     public void taskCompleted(View view) {

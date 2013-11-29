@@ -23,7 +23,6 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:background="#FFEB47"
         android:text="Øjndråber (Gurli)"
         android:onClick="taskCompleted" />
 
@@ -35,7 +34,6 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:background="#FFEB47"
         android:text="Blodtryksmåling (Gurli)"
         android:onClick="taskCompleted"/>
 
@@ -47,7 +45,6 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:background="#64C73C"
         android:text="Bad (Svend)"
         android:onClick="taskCompleted"/>
 
@@ -59,7 +56,6 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:background="#64C73C"
         android:text="Blodprøve (Svend)"
         android:onClick="taskCompleted"/>
 
