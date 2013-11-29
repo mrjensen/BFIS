@@ -150,6 +150,7 @@
         android:layout_width="150dip"
         android:layout_height="match_parent"
         android:text="Fortryd"
+        android:id="@+id/btn_cancel"
         android:background="#cc0000"
         android:layout_marginRight="5dip"
         />
@@ -158,6 +159,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:text="Gem måling"
+        android:id="@+id/btn_save"
         android:background="#1f8004"/>
 
     </LinearLayout>

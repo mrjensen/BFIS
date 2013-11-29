@@ -40,7 +40,7 @@ public class BloodpressureService extends IntentService {
 
         //Create calendar and set the alarmmanager.
         Calendar cal = Calendar.getInstance();
-        cal.add(Calendar.SECOND, 20);
+        cal.add(Calendar.SECOND, 5);
         alarmManager.set(AlarmManager.RTC_WAKEUP, cal.getTimeInMillis(), pendingIntent);
 
 
