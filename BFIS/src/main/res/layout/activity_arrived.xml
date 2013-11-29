@@ -22,5 +22,12 @@
         android:text="Du er ankommet"
         />
 
+    <Button
+        android:id="@+id/btn_door_entry"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="30dip"
+        android:text="Gå gennem dør" />
 
 </LinearLayout>
