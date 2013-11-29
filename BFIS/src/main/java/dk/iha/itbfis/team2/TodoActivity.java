@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.view.View;
@@ -41,7 +42,7 @@ public class TodoActivity extends Activity {
         }
 
         if (!setDone) {
-            new CountDownTimer(20000, 1000) {
+            new CountDownTimer(10000, 1000) {
                 @Override
                 public void onTick(long l) {
                     TextView textView = (TextView)findViewById(R.id.tick);
@@ -52,6 +53,27 @@ public class TodoActivity extends Activity {
                 public void onFinish() {
                     Intent intent = new Intent(TodoActivity.this, BPPatientSelectActivity.class);
                     startActivity(intent);
+                }
+            }.start();
+        } else {
+            new CountDownTimer(5000, 1000) {
+                @Override
+                public void onTick(long l) {
+
+                }
+
+                @Override
+                public void onFinish() {
+                    MediaPlayer mediaPlayer = MediaPlayer.create(TodoActivity.this, R.raw.beep);
+                    mediaPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+                        @Override
+                        public void onCompletion(MediaPlayer mediaPlayer) {
+                            Intent intent = new Intent(TodoActivity.this, FinishedActivity.class);
+                            startActivity(intent);
+                            mediaPlayer.release();
+                        }
+                    });
+                    mediaPlayer.start();
                 }
             }.start();
         }
