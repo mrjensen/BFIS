@@ -55,7 +55,7 @@
         android:layout_marginLeft="10dip"
         android:textSize="70dip"
         android:textStyle="bold"
-        android:layout_marginTop="5dip"/>
+        />
 
     <TextView
         android:layout_width="wrap_content"
@@ -76,7 +76,7 @@
         android:layout_marginLeft="10dip"
         android:textSize="70dip"
         android:textStyle="bold"
-        android:layout_marginTop="5dip"/>
+        />
 
     <TextView
         android:layout_width="wrap_content"
@@ -100,14 +100,15 @@
             android:layout_width="50dip"
             android:layout_height="50dip"
             android:src="@drawable/heart"
-            android:layout_marginLeft="85dip"
+            android:id="@+id/iv_heart"
+            android:layout_marginLeft="80dip"
             android:layout_marginRight="15dip"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="50"
-            android:id="@+id/tv_max_puls"
+            android:id="@+id/tv_puls"
             android:layout_gravity="center_horizontal"
 
             android:textSize="70dip"

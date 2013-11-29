@@ -20,12 +20,16 @@
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
+
+                <action android:name="dk.iha.itbfis.team2.sharing" />
             </intent-filter>
         </activity>
         <activity android:name=".LoginActivity" />
         <activity android:name=".TodoActivity" />
         <activity android:name=".WelcomeActivity" />
         <activity android:name=".BloodPressureActivity" />
+        <service android:name=".BloodpressureService" android:label="BloodpressureService"/>
+
     </application>
 
 </manifest>
