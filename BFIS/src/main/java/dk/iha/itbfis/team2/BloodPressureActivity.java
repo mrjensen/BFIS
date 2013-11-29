@@ -53,6 +53,7 @@ public class BloodPressureActivity extends Activity {
     }
 
     private TickReceiver tickReceiver = new TickReceiver();
+    private Intent intent;
 
 
 
@@ -70,7 +71,7 @@ public class BloodPressureActivity extends Activity {
 
         patient.setText(name);
 
-        Intent intent = new Intent(BloodPressureActivity.this, BloodpressureService.class);
+        intent = new Intent(BloodPressureActivity.this, BloodpressureService.class);
         intent.putExtra("name", name);
 
         startService(intent);
@@ -82,6 +83,7 @@ public class BloodPressureActivity extends Activity {
 
         //Unregister when the application is paused.
         unregisterReceiver(tickReceiver);
+        this.stopService(intent);
 
     }
 
