@@ -30,6 +30,8 @@
         <activity android:name=".BloodPressureActivity" />
         <activity android:name=".BPPatientSelectActivity" />
         <activity android:name=".BloodPressureDoneActivity" />
+        <activity android:name=".MapActivity" />
+        <activity android:name=".PatientActivity" />
 
         <service android:name=".BloodpressureService" android:label="BloodpressureService"/>
 
