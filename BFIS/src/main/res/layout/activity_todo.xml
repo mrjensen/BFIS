@@ -13,7 +13,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:text="Todo:"/>
+        android:text="Todo:" />
 
     <Button
         android:id="@+id/todo_btn_1"
@@ -23,8 +23,8 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:background="#FFEB47"
-        android:text="Øjndråber (Gurli)"/>
+        android:text="Øjndråber (Gurli)"
+        android:onClick="taskCompleted" />
 
     <Button
         android:id="@+id/todo_btn_2"
@@ -34,8 +34,8 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:background="#FFEB47"
-        android:text="Blodtryksmåling (Gurli)"/>
+        android:text="Blodtryksmåling (Gurli)"
+        android:onClick="taskCompleted"/>
 
     <Button
         android:id="@+id/todo_btn_3"
@@ -45,8 +45,8 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:background="#64C73C"
-        android:text="Bad (Svend)"/>
+        android:text="Bad (Svend)"
+        android:onClick="taskCompleted"/>
 
     <Button
         android:id="@+id/todo_btn_4"
@@ -56,7 +56,7 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:background="#64C73C"
-        android:text="Blodprøve (Svend)"/>
+        android:text="Blodprøve (Svend)"
+        android:onClick="taskCompleted"/>
 
 </LinearLayout>
