@@ -34,7 +34,7 @@ public class MainActivity extends Activity {
         bloodButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, BloodPressureActivity.class);
+                Intent intent = new Intent(MainActivity.this, BPPatientSelectActivity.class);
                 startActivity(intent);
             }
         });

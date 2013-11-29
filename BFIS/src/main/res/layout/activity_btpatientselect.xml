@@ -2,6 +2,46 @@
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@drawable/login_background">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Blodtryksmåler detekteret"
+        android:layout_gravity="center_horizontal"
+        android:textStyle="bold"
+        android:textSize="20dip"
+        android:layout_marginTop="100dip"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="15dip"
+        android:textSize="18dip"
+        android:text="Hvem vil du foretage målingen på?"/>
+
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/s_chooseperson"
+        android:layout_marginTop="20dip"
+        android:layout_gravity="center_horizontal"
+        android:prompt="@string/choose_person"
+        android:entries="@array/person_array"/>
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dip"
+        android:text="Start måling"
+        android:background="#1f8004"
+        android:id="@+id/btn_startmeseaurement"
+        android:paddingLeft="40dip"
+        android:paddingRight="40dip"
+        android:layout_gravity="center_horizontal"/>
+
 
 </LinearLayout>

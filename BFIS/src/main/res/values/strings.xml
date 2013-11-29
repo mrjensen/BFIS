@@ -4,5 +4,11 @@
     <string name="app_name">BFIS</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+    <string name="choose_person">Vælg person</string>
+
+    <string-array name="person_array">
+        <item>Gurli Andersen</item>
+        <item>Svend Andersen</item>
+    </string-array>
 
 </resources>

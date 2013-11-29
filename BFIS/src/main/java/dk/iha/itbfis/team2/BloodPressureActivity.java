@@ -19,6 +19,7 @@ public class BloodPressureActivity extends Activity {
 
     private TextView max;
     private TextView min;
+    private TextView patient;
     private TextView puls;
     private ImageView heart;
     boolean toogle = false;
@@ -59,10 +60,15 @@ public class BloodPressureActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bloodpressure);
 
+        String name = getIntent().getExtras().getString("name");
+
         max = (TextView) findViewById(R.id.tv_max_puls);
         min = (TextView) findViewById(R.id.tv_min_puls);
         puls = (TextView) findViewById(R.id.tv_puls);
         heart = (ImageView) findViewById(R.id.iv_heart);
+        patient = (TextView) findViewById(R.id.tv_patient);
+
+        patient.setText(name);
 
         Intent intent = new Intent(BloodPressureActivity.this, BloodpressureService.class);
 
