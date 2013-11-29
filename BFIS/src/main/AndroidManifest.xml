@@ -29,9 +29,11 @@
         <activity android:name=".WelcomeActivity" />
         <activity android:name=".BloodPressureActivity" />
         <activity android:name=".BPPatientSelectActivity" />
+        <activity android:name=".BloodPressureDoneActivity" />
 
         <service android:name=".BloodpressureService" android:label="BloodpressureService"/>
 
+        <receiver android:name=".BloodpressureReceiver" />
     </application>
 
 </manifest>
