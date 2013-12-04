@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
 /**
@@ -17,10 +18,15 @@ import android.widget.TextView;
 public class TodoActivity extends Activity {
 
     private boolean setDone = false;
+    private ProgressBar progressBar;
+    private TextView msg;
 
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_todo);
+
+        progressBar = (ProgressBar) findViewById(R.id.simulated_progress);
+        msg = (TextView) findViewById(R.id.tick);
 
         Intent intent = getIntent();
         if (intent.getExtras() != null)
@@ -42,20 +48,22 @@ public class TodoActivity extends Activity {
         }
 
         if (!setDone) {
-            new CountDownTimer(10000, 1000) {
-                @Override
-                public void onTick(long l) {
-                    TextView textView = (TextView)findViewById(R.id.tick);
-                    textView.setText("" + l);
-                }
-
-                @Override
-                public void onFinish() {
-                    Intent intent = new Intent(TodoActivity.this, BPPatientSelectActivity.class);
-                    startActivity(intent);
-                }
-            }.start();
+            msg.setText("");
+//            new CountDownTimer(10000, 1000) {
+//                @Override
+//                public void onTick(long l) {
+//                    TextView textView = (TextView)findViewById(R.id.tick);
+//                    textView.setText("" + l);
+//                }
+//
+//                @Override
+//                public void onFinish() {
+//                    Intent intent = new Intent(TodoActivity.this, BPPatientSelectActivity.class);
+//                    startActivity(intent);
+//                }
+//            }.start();
         } else {
+            msg.setText("Alle opgaver er fuldført");
             new CountDownTimer(5000, 1000) {
                 @Override
                 public void onTick(long l) {
@@ -91,6 +99,7 @@ public class TodoActivity extends Activity {
             case R.id.todo_btn_2:
                 btn = (Button)findViewById(R.id.todo_btn_2);
                 setColor(btn);
+                startProgressbar();
                 break;
             case R.id.todo_btn_3:
                 btn = (Button)findViewById(R.id.todo_btn_3);
@@ -101,6 +110,24 @@ public class TodoActivity extends Activity {
                 setColor(btn);
                 break;
         }
+    }
+
+    private void startProgressbar() {
+        msg.setText("Søger efter måler");
+        progressBar.setVisibility(View.VISIBLE);
+        new CountDownTimer(5000, 1000) {
+            @Override
+            public void onTick(long l) {
+
+            }
+
+            @Override
+            public void onFinish() {
+                progressBar.setVisibility(View.INVISIBLE);
+                Intent intent = new Intent(TodoActivity.this, BPPatientSelectActivity.class);
+                startActivity(intent);
+            }
+        }.start();
     }
 
     private void setColor(Button button) {

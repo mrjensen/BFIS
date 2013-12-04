@@ -59,6 +59,13 @@
         android:text="Blodprøve (Svend)"
         android:onClick="taskCompleted"/>
 
+    <ProgressBar
+        android:visibility="invisible"
+        android:id="@+id/simulated_progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal" />
+
     <TextView
         android:id="@+id/tick"
         android:textSize="20dip"
