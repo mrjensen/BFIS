@@ -42,24 +42,27 @@ public class BloodPressureDoneActivity extends Activity {
 
             @Override
             public void onClick(View v) {
+                Intent intent = new Intent(BloodPressureDoneActivity.this, TodoActivity.class);
+                intent.putExtra("setDone", true);
+                startActivity(intent);
 
 
             }
 
         });
 
-        new CountDownTimer(5000, 1000) {
-            @Override
-            public void onTick(long l) {
-
-            }
-
-            @Override
-            public void onFinish() {
-                Intent intent = new Intent(BloodPressureDoneActivity.this, TodoActivity.class);
-                intent.putExtra("setDone", true);
-                startActivity(intent);
-            }
-        }.start();
+//        new CountDownTimer(5000, 1000) {
+//            @Override
+//            public void onTick(long l) {
+//
+//            }
+//
+//            @Override
+//            public void onFinish() {
+//                Intent intent = new Intent(BloodPressureDoneActivity.this, TodoActivity.class);
+//                intent.putExtra("setDone", true);
+//                startActivity(intent);
+//            }
+//        }.start();
     }
 }
