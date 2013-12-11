@@ -46,13 +46,9 @@ public class ArrivedActivity extends Activity {
 
     @Override
     public void onNewIntent(Intent intent) {
-
         if (NfcAdapter.ACTION_TAG_DISCOVERED.equals(intent.getAction())) {
-            Parcelable[] messages = intent.getParcelableArrayExtra(NfcAdapter.EXTRA_NDEF_MESSAGES);
-            if (messages != null) {
-                //beepAndContinue();
-                scanOk();
-            }
+            //beepAndContinue();
+            scanOk();
         }
     }
 
@@ -60,6 +56,7 @@ public class ArrivedActivity extends Activity {
         Intent intent = new Intent(ArrivedActivity.this, PatientActivity.class);
         startActivity(intent);
     }
+
     public void beepAndContinue() {
         MediaPlayer mediaPlayer = MediaPlayer.create(ArrivedActivity.this, R.raw.beep);
         mediaPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
