@@ -85,8 +85,6 @@ public class LoginActivity extends Activity {
 
     }
 
-
-
     private void enter(){
         String username = et_username.getText().toString();
         String password = et_password.getText().toString();
@@ -98,6 +96,4 @@ public class LoginActivity extends Activity {
             Toast.makeText(getApplicationContext(), "Brugernavn og password matcher ikke.", Toast.LENGTH_SHORT).show();
         }
     }
-
-
 }

@@ -1,41 +1,75 @@
 package dk.iha.itbfis.team2;
 
 import android.app.Activity;
+import android.app.PendingIntent;
 import android.content.Intent;
+import android.content.IntentFilter;
 import android.media.MediaPlayer;
 import android.os.Bundle;
-import android.os.CountDownTimer;
-import android.view.View;
-import android.widget.Button;
-import android.widget.Toast;
+import android.os.Parcelable;
+import android.nfc.NfcAdapter;
 
-/**
- * Created by mje on 29/11/13.
- */
+
 public class ArrivedActivity extends Activity {
+    protected NfcAdapter nfcAdapter;
+    protected PendingIntent nfcPendingIntent;
+
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_arrived);
 
+        nfcAdapter = NfcAdapter.getDefaultAdapter(this);
+        nfcPendingIntent = PendingIntent.getActivity(this, 0, new Intent(this, this.getClass()).addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP), 0);
+    }
 
-//        Toast.makeText(ArrivedActivity.this, "Gang fra bil til dør", Toast.LENGTH_LONG).show();
+    @Override
+    protected void onResume() {
+        super.onResume();
+        enableForegroundMode();
+    }
 
-        Button btn_next = (Button) findViewById(R.id.btn_door_entry);
-        btn_next.setOnClickListener(new View.OnClickListener() {
+    @Override
+    protected void onPause() {
+        super.onPause();
+        disableForegroundMode();
+    }
+
+    public void enableForegroundMode() {
+        IntentFilter tagDetected = new IntentFilter(NfcAdapter.ACTION_TAG_DISCOVERED);
+        IntentFilter[] writeTagFilters = new IntentFilter[]{tagDetected};
+        nfcAdapter.enableForegroundDispatch(this, nfcPendingIntent, writeTagFilters, null);
+    }
+
+    public void disableForegroundMode() {
+        nfcAdapter.disableForegroundDispatch(this);
+    }
+
+    @Override
+    public void onNewIntent(Intent intent) {
+
+        if (NfcAdapter.ACTION_TAG_DISCOVERED.equals(intent.getAction())) {
+            Parcelable[] messages = intent.getParcelableArrayExtra(NfcAdapter.EXTRA_NDEF_MESSAGES);
+            if (messages != null) {
+                //beepAndContinue();
+                scanOk();
+            }
+        }
+    }
+
+    public void scanOk() {
+        Intent intent = new Intent(ArrivedActivity.this, PatientActivity.class);
+        startActivity(intent);
+    }
+    public void beepAndContinue() {
+        MediaPlayer mediaPlayer = MediaPlayer.create(ArrivedActivity.this, R.raw.beep);
+        mediaPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
             @Override
-            public void onClick(View view) {
-                MediaPlayer mediaPlayer = MediaPlayer.create(ArrivedActivity.this, R.raw.beep);
-                mediaPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
-                    @Override
-                    public void onCompletion(MediaPlayer mediaPlayer) {
-                        Intent intent = new Intent(ArrivedActivity.this, PatientActivity.class);
-                        startActivity(intent);
-                        mediaPlayer.release();
-                    }
-                });
-                mediaPlayer.start();
+            public void onCompletion(MediaPlayer mediaPlayer) {
+                Intent intent = new Intent(ArrivedActivity.this, PatientActivity.class);
+                startActivity(intent);
+                mediaPlayer.release();
             }
         });
-
+        mediaPlayer.start();
     }
 }
