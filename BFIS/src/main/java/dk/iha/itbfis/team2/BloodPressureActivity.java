@@ -87,7 +87,10 @@ public class BloodPressureActivity extends Activity {
 
     }
 
+    @Override
+    public void onBackPressed() {
 
+    }
 
     @Override
     protected void onResume() {

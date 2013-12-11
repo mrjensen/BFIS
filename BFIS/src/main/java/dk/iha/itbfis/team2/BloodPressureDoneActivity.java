@@ -7,6 +7,7 @@ import android.os.CountDownTimer;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 /**
  * Created by kaspernissen on 29/11/13.
@@ -42,14 +43,16 @@ public class BloodPressureDoneActivity extends Activity {
 
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(BloodPressureDoneActivity.this, TodoActivity.class);
+                Intent intent = new Intent(BloodPressureDoneActivity.this, MainActivity.class);
                 intent.putExtra("setDone", true);
+                Toast.makeText(BloodPressureDoneActivity.this,"Måling gemt", Toast.LENGTH_SHORT).show();
                 startActivity(intent);
 
 
             }
 
         });
+
 
 //        new CountDownTimer(5000, 1000) {
 //            @Override
@@ -64,5 +67,10 @@ public class BloodPressureDoneActivity extends Activity {
 //                startActivity(intent);
 //            }
 //        }.start();
+    }
+
+    @Override
+    public void onBackPressed() {
+
     }
 }

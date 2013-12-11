@@ -13,17 +13,11 @@ public class PatientActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_patientinfo);
 
-        CountDownTimer countDownTimer = new CountDownTimer(5000,5000) {
-            @Override
-            public void onTick(long l) {
+    }
 
-            }
-
-            @Override
-            public void onFinish() {
-                Intent intent = new Intent(PatientActivity.this, TodoActivity.class);
-                startActivity(intent);
-            }
-        }.start();
+    @Override
+    public void onBackPressed() {
+        Intent intent = new Intent(PatientActivity.this, MainActivity.class);
+        startActivity(intent);
     }
 }

@@ -3,11 +3,14 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/login_background">
+    android:background="@drawable/login_background"
+    android:id="@+id/ll_login"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
 
     <ImageView
-        android:layout_height="230dip"
-        android:layout_width="230dip"
+        android:layout_height="200dip"
+        android:layout_width="200dip"
         android:src="@drawable/crip_logo"
         android:layout_gravity="center"/>
 
@@ -41,7 +44,7 @@
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:inputType="textPassword"
+        android:inputType="numberPassword"
         android:ems="10"
         android:id="@+id/et_password"
         android:layout_gravity="center_horizontal" />

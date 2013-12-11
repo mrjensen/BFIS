@@ -21,8 +21,16 @@
         android:layout_width="wrap_content"
         android:layout_marginTop="30dip"
         android:layout_height="wrap_content"
-        android:text="Start simulering"
+        android:text="Login"
         android:id="@+id/btn_start"
+        android:layout_gravity="center" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_marginTop="30dip"
+        android:layout_height="wrap_content"
+        android:text="Dør/NFC"
+        android:id="@+id/btn_door"
         android:layout_gravity="center" />
 
     <Button
@@ -31,14 +39,6 @@
         android:layout_height="wrap_content"
         android:text="Blodtryk"
         android:id="@+id/btn_bloodstart"
-        android:layout_gravity="center" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_marginTop="30dip"
-        android:layout_height="wrap_content"
-        android:text="Todo"
-        android:id="@+id/btn_todo_list"
         android:layout_gravity="center" />
 
 </LinearLayout>

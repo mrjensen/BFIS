@@ -18,7 +18,7 @@ public class ArrivedActivity extends Activity {
         setContentView(R.layout.activity_arrived);
 
 
-        Toast.makeText(ArrivedActivity.this, "Gang fra bil til dør", Toast.LENGTH_LONG).show();
+//        Toast.makeText(ArrivedActivity.this, "Gang fra bil til dør", Toast.LENGTH_LONG).show();
 
         Button btn_next = (Button) findViewById(R.id.btn_door_entry);
         btn_next.setOnClickListener(new View.OnClickListener() {
