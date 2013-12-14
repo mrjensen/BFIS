@@ -17,18 +17,18 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="200dip"
         android:textSize="40dip"
-        android:text="Du er ankommet"
-        />
+        android:text="Du er nu ankommet"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="160dip"/>
 
-    <Button
-        android:id="@+id/btn_door_entry"
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Scan venligst patientens identifikationsbrik"
+        android:id="@+id/textView"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="30dip"
-        android:text="Gå gennem dør" />
+        android:layout_marginTop="20dip"/>
 
 </LinearLayout>
